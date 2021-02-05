@@ -112,27 +112,27 @@ function PhaserAssetsLoader($assetsRootFolder,$functionName,$jsOutputFile)
        if($functionName){$functionName="_".$functionName;}
        $jsOutput .= "\r\nfunction PhaserAssetsLoader$functionName(obj)\r\n{\r\n\r\n";
 
-       if(is_array($arrOutput['images'])){
+       if(isset($arrOutput['images'])){
               $jsOutput .= "\r\n\r\n/* Loading Images */\r\n";
               $jsOutput .= implode("\r\n",$arrOutput['images']);
        }
 
-       if(is_array($arrOutput['spritesheets'])){
+       if(isset($arrOutput['spritesheets'])){
               $jsOutput .= "\r\n\r\n/* Loading Sprite Sheets */\r\n";
               $jsOutput .= implode("\r\n",$arrOutput['spritesheets']);
        }
 
-       if(is_array($arrOutput['audio'])){
+       if(isset($arrOutput['audio'])){
               $jsOutput .= "\r\n\r\n/* Loading Audio */\r\n";
               $jsOutput .= implode("\r\n",$arrOutput['audio']);
        }
 
-       if(is_array($arrOutput['fonts'])){
+       if(isset($arrOutput['fonts'])){
               $jsOutput .= "\r\n\r\n/* Loading Fonts */\r\n";
               $jsOutput .= implode("\r\n",$arrOutput['fonts']);
        }
 
-       if(is_array($arrOutput['html'])){
+       if(isset($arrOutput['html'])){
        $jsOutput .= "\r\n\r\n/* Loading HTML */\r\n";
        $jsOutput .= implode("\r\n",$arrOutput['html']);
        }
